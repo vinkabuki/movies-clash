@@ -11,7 +11,7 @@ function App() {
   const [currentItem, setCurrentItem] = useState(null)
 
   useEffect(() => {
-    axios.get('http://localhost:8000/recommendations/').then((response) => {
+    axios.get('https://my-json-server.typicode.com/vinkabuki/ti/recommendations').then((response) => {
       setMovies(response.data)
       setCurrentItem(response.data[0])
     })
@@ -24,12 +24,12 @@ function App() {
   }, [currentItem, movies, count])
 
   const onAccept = (id) => {
-    axios.put(`http://localhost:8000/accept/`, { id: id })
+    //axios.put(`http://localhost:8000/accept/`, { id: id })
     setCount(count + 1)
   }
 
   const onReject = (id) => {
-    axios.put(`http://localhost:8000/recommendations/${id}/reject/`)
+    // axios.put(`http://localhost:8000/recommendations/${id}/reject/`)
     setCount(count + 1)
   }
 

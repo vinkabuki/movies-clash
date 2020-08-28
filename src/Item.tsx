@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ItemBox = styled.div`
-  background-color: aquamarine;
+  background-color: blue;
   max-width: 500px;
   margin: auto;
   padding: 30px;

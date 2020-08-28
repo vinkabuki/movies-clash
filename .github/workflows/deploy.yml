@@ -1,0 +1,24 @@
+name: DEPLOY
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set username
+        run: |
+          git config --global user.email "vincent.kabacky@gmail.com",
+          git config --global user.name "vinkabuki",
+      - uses: actions/checkout@master
+      - uses: fregante/setup-git-token@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm install
+          npm build
+      - name: CHeck repositry
+        run: ls
+      - name: Build
+        run: ./node_modules/.bin/react-scripts build
+      - name: Deploy
+        run: ./node_modules/.bin/gh-pages -d build
