@@ -1,18 +1,20 @@
 import React from 'react'
+import { MoviesDataContext } from './data-context'
+import api from './Api'
+import Layout from './Layout'
 
-import Item from './Item'
-import fetchMoviesData from './Fetch'
+function App () {
+  const movies: Array<object> = api.fetchMovies()
 
-function App() {
-  const movies = fetchMoviesData()
-
-  if (movies === null) {
-    return <div>wait</div>
+  if (movies.length === 0) {
+    return <div>wait for data</div>
   } else {
     return (
-      <div className="App">
-        <Item movies={movies}></Item>
-      </div>
+      <MoviesDataContext.Provider value={movies}>
+        <div className='App'>
+          <Layout />
+        </div>
+      </MoviesDataContext.Provider>
     )
   }
 }
