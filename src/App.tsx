@@ -1,54 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import axios from 'axios'
 import Item from './Item'
+import fetchMoviesData from './Fetch'
 
-function foo() {}
-foo()
 function App() {
-  const [count, setCount] = useState(0)
-  const [movies, setMovies] = useState([])
-  const [currentItem, setCurrentItem] = useState(null)
+  const movies = fetchMoviesData()
 
-  useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/vinkabuki/ti/recommendations').then((response) => {
-      setMovies(response.data)
-      setCurrentItem(response.data[0])
-    })
-  }, [])
-
-  useEffect(() => {
-    if (currentItem !== null) {
-      setCurrentItem(movies[count])
-    }
-  }, [currentItem, movies, count])
-
-  const onAccept = (id) => {
-    //axios.put(`http://localhost:8000/accept/`, { id: id })
-    setCount(count + 1)
-  }
-
-  const onReject = (id) => {
-    // axios.put(`http://localhost:8000/recommendations/${id}/reject/`)
-    setCount(count + 1)
-  }
-
-  if (currentItem === null) {
+  if (movies === null) {
     return <div>wait</div>
-  } else if (count === movies.length) {
-    return <div>there is no more movies</div>
   } else {
     return (
       <div className="App">
-        <Item
-          id={currentItem.id}
-          imageURL={currentItem.imageURL}
-          title={currentItem.title}
-          summary={currentItem.summary}
-          rating={currentItem.rating}
-          onAccept={onAccept}
-          onReject={onReject}
-        ></Item>
+        <Item movies={movies}></Item>
       </div>
     )
   }

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const ItemBox = styled.div`
   background-color: blue;
@@ -7,7 +8,7 @@ const ItemBox = styled.div`
   margin: auto;
   padding: 30px;
 `
-const ImageBox = styled.img`
+const CoverImage = styled.img`
   width: 100%;
 `
 const MovieTitle = styled.h1`
@@ -16,55 +17,53 @@ const MovieTitle = styled.h1`
 const Summary = styled.p`
   text-align: left;
 `
-const Button = styled.button`
+const MainButton = styled.button`
   width: 50%;
   background-color: ${(props) => props.bgcolor};
 `
-/* 
-function Item({ id, imageURL, title, summary, rating, onAccept, onReject }) {
-  console.log(imageURL)
-  return (
-    <ItemBox>
-    <ImageBox src={imageURL} />
-    <MovieTitle>{title}</MovieTitle>
-    <Summary>{summary}</Summary>
-    <h2>{rating}/10</h2>
-    <Button onClick={() => onReject(id)} bgcolor="red">
-    Reject
-    </Button>
-    <Button onClick={() => onAccept(id)} bgcolor="green">
-    Accept
-    </Button>
-    </ItemBox>
-    )
-  }
-  */
 
 interface items {
-  id: string
-  imageURL: string
-  title: string
-  summary: string
-  rating: number
-  onReject: any
-  onAccept: any
+  movies: Array<object>
 }
 
-export const Item = ({ id, imageURL, title, summary, rating, onAccept, onReject }: items) => {
-  return (
-    <ItemBox>
-      <ImageBox src={imageURL} />
-      <MovieTitle>{title}</MovieTitle>
-      <Summary>{summary}</Summary>
-      <h2>{rating}/10</h2>
-      <Button onClick={() => onReject(id)} bgcolor="red">
-        Reject
-      </Button>
-      <Button onClick={() => onAccept(id)} bgcolor="green">
-        Accept
-      </Button>
-    </ItemBox>
-  )
+export const Item = (props: items) => {
+  const { movies } = props
+  const [count, setCount] = useState(0)
+  const [currentItem, setCurrentItem] = useState(null)
+
+  useEffect(() => {
+    setCurrentItem(movies[count])
+  })
+
+  const onAccept = (id: string) => {
+    axios.put(`http://localhost:8000/recommendations/${id}/accept/`)
+    setCount(count + 1)
+  }
+  const onReject = (id: string) => {
+    axios.put(`http://localhost:8000/recommendations/${id}/reject/`)
+    setCount(count + 1)
+  }
+
+  if (currentItem === null) {
+    return <div>waiter</div>
+  } else if (count === movies.length) {
+    return <div>there is no more items</div>
+  } else {
+    return (
+      <ItemBox>
+        <CoverImage src={currentItem.imageURL} alt="there is no cover image for this movie, sorry" />
+        <MovieTitle>{currentItem.title}</MovieTitle>
+        <Summary>{currentItem.summary}</Summary>
+        <h2>{currentItem.rating}/10</h2>
+        <MainButton onClick={() => onReject(currentItem.id)} bgcolor="red">
+          Reject
+        </MainButton>
+        <MainButton onClick={() => onAccept(currentItem.id)} bgcolor="green">
+          Accept
+        </MainButton>
+      </ItemBox>
+    )
+  }
 }
 
 export default Item
