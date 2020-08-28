@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Item from './Item'
 
+function foo() {}
+foo()
 function App() {
   const [count, setCount] = useState(0)
   const [movies, setMovies] = useState([])
