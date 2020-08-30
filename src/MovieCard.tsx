@@ -36,7 +36,10 @@ interface IProps {
 
 export const MovieCard = ({ item, onAcceptHandler, onRejectHandler }: IProps) => {
   const handler = useSwipeable({
-    onSwiped: (id) => {
+    onSwipedLeft: (id) => {
+      onRejectHandler(id)
+    },
+    onSwipedRight: (id) => {
       onRejectHandler(id)
     }
   })

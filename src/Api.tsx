@@ -6,21 +6,21 @@ const FetchMovies = () => {
 
   useEffect(() => {
     axios
-      .get('https://my-json-server.typicode.com/vinkabuki/ti/recommendations')
-      .then(response => {
+      .get(`https://frozen-inlet-56856.herokuapp.com/recommendations`)
+      .then((response) => {
         setMovies(response.data)
         return response.data
       })
-      .catch(err => console.log(err))
+      .catch((err) => console.log(err))
   }, [])
   return movies
 }
 
 const acceptMovie = (id: string) => {
-  axios.put(`http://localhost:8000/recommendations/${id}/accept/`).catch(err => console.log(err))
+  axios.put(`https://frozen-inlet-56856.herokuapp.com/recommendations/${id}/accept/`).catch((err) => console.log(err))
 }
 const rejectMovie = (id: string) => {
-  axios.put(`http://localhost:8000/recommendations/${id}/reject/`).catch(err => console.log(err))
+  axios.put(`https://frozen-inlet-56856.herokuapp.com/recommendations/${id}/reject/`).catch((err) => console.log(err))
 }
 
 export default {
