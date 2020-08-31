@@ -1,15 +1,24 @@
 import React from 'react'
+
+import styled from 'styled-components'
+
 import Header from './Header'
 import Body from './Body'
 import Footer from './Footer'
 
+const LayoutBox = styled.div`
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+`
+
 const Layout: React.FC = () => {
   return (
-    <div>
+    <LayoutBox>
       <Header />
       <Body />
       <Footer />
-    </div>
+    </LayoutBox>
   )
 }
 

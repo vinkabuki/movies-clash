@@ -42,3 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+I've also implemnted a very simple NodeJS/Express server and built an primitive API which returns a list of movies, and creates list of accepted and rejected movies, it has some flaws but it was meant only to provide a basic API.
+
+Answering this question I've created a context provider in my app, it may feel unnecessary baceause the app is relatively small, in bigger app it would make app clearer, and easier to maintain, not only because separation of concerns, but also it would be possible to avoid endless messy passing of props.

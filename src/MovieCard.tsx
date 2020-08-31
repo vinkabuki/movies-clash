@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const ItemBox = styled.div`
+const MovieCardBox = styled.div`
   position: relative;
-  max-width: 400px;
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -17,7 +16,7 @@ const ItemBox = styled.div`
   box-shadow: 10px 7px 65px -13px rgba(0, 0, 0, 0.75);
 `
 
-const Kontener = styled.div`
+const InfoBox = styled.div`
   padding: 20px;
   position: absolute;
   bottom: 20px;
@@ -27,57 +26,7 @@ const Kontener = styled.div`
     }
   }};
 `
-
-const MovieTitle = styled.h1`
-  text-align: left;
-  color: ${(props) => (props.themek ? 'white' : 'black')};
-  display: block;
-`
-const Summary = styled.p`
-  text-align: left;
-  color: ${(props) => (props.themek ? 'white' : 'black')};
-  display: block;
-`
-
-const Rating = styled.p`
-  text-align: left;
-  color: ${(props) => (props.themek ? 'white' : 'black')};
-  display: block;
-`
-const Spanke = styled.span`
-  background-color: rgba(0, 0, 0, 0.75);
-`
-const SecondaryButton = styled.button`
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  border-radius: 20px;
-  padding: 20px;
-  cursor: pointer;
-  border: none;
-  font-size: 18px;
-  outline: 0;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-  transform: scale(1);
-  animation: pulse 2s infinite;
-  @keyframes pulse {
-    0% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    }
-
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-
-    100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-  }
-`
-const Expander = styled.div`
+const ExpandBox = styled.div`
   box-sizing: border-box;
   padding: 40px;
   max-width: 400px;
@@ -94,6 +43,50 @@ const Expander = styled.div`
     }
   }};
 `
+const MovieTitle = styled.h1`
+  text-align: left;
+  color: ${(props) => (props.expanded ? 'white' : 'black')};
+`
+const MovieSummary = styled.p`
+  text-align: left;
+  color: ${(props) => (props.expanded ? 'white' : 'black')};
+`
+const MovieRating = styled.p`
+  text-align: left;
+  color: ${(props) => (props.expanded ? 'white' : 'black')};
+`
+const TextSpan = styled.span`
+  background-color: rgba(0, 0, 0, 0.3);
+`
+const SecondaryButton = styled.button`
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 90px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+`
 
 interface IProps {
   item: {
@@ -106,30 +99,30 @@ interface IProps {
 }
 
 export const MovieCard = ({ item }: IProps) => {
-  const [expand, setExpand] = useState(true)
+  const [expanded, setExpanded] = useState(true)
 
   const Expand = () => {
-    if (expand) {
-      setExpand(false)
+    if (expanded) {
+      setExpanded(false)
     } else {
-      setExpand(true)
+      setExpanded(true)
     }
   }
 
   return (
     <>
-      <ItemBox imgSrc={item.imageURL}>
-        <Kontener isVisible={expand}>
-          <MovieTitle themek={expand}>
-            <Spanke>{item.title}</Spanke>
+      <MovieCardBox imgSrc={item.imageURL}>
+        <InfoBox isVisible={expanded}>
+          <MovieTitle expanded={expanded}>
+            <TextSpan>{item.title}</TextSpan>
           </MovieTitle>
-          <Rating themek={expand}>
-            <Spanke>{item.rating}/10</Spanke>
-          </Rating>
-          <Summary themek={expand}>
-            <Spanke>{item.summary}</Spanke>
-          </Summary>
-        </Kontener>
+          <MovieRating expanded={expanded}>
+            <TextSpan>{item.rating}/10</TextSpan>
+          </MovieRating>
+          <MovieSummary expanded={expanded}>
+            <TextSpan>{item.summary}</TextSpan>
+          </MovieSummary>
+        </InfoBox>
         <SecondaryButton
           onClick={() => {
             Expand()
@@ -137,12 +130,12 @@ export const MovieCard = ({ item }: IProps) => {
         >
           i
         </SecondaryButton>
-        <Expander isVisible={expand}>
-          <MovieTitle themek={expand}>{item.title}</MovieTitle>
-          <Rating themek={expand}>{item.rating}/10</Rating>
-          <Summary themek={expand}>{item.summary}</Summary>
-        </Expander>
-      </ItemBox>
+        <ExpandBox isVisible={expanded}>
+          <MovieTitle expanded={expanded}>{item.title}</MovieTitle>
+          <MovieRating expanded={expanded}>{item.rating}/10</MovieRating>
+          <MovieSummary expanded={expanded}>{item.summary}</MovieSummary>
+        </ExpandBox>
+      </MovieCardBox>
     </>
   )
 }
