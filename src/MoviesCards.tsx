@@ -33,11 +33,11 @@ const MainButton = styled.button`
     height: 60px;
   }
 `
-interface items {
+interface IProps {
   movies: Array<object>
 }
 
-function MoviesCards({ movies }: items) {
+const MoviesCards: React.FC<IProps> = ({ movies }: IProps) => {
   const [count, setCount] = useState(0)
   const [currentItem, setCurrentItem] = useState(null)
 
@@ -55,7 +55,7 @@ function MoviesCards({ movies }: items) {
   }
   const onSwipeHandler = useSwipeable({
     onSwipedLeft: () => {
-      onRejectHandler(currentItem.id)
+      onAcceptHandler(currentItem.id)
     },
     onSwipedRight: () => {
       onRejectHandler(currentItem.id)
@@ -68,7 +68,7 @@ function MoviesCards({ movies }: items) {
   } else {
     return (
       <>
-        <div {...onSwipeHandler}>
+        <div className="" {...onSwipeHandler}>
           <MovieCard item={currentItem}></MovieCard>
         </div>
         <ButtonsBox>

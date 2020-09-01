@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesCards component basic render test Render example movie item 1`] = `
+.c0 {
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url(https://google.com/images.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 580px;
+  box-shadow: 10px 7px 65px -13px rgba(0,0,0,0.75);
+}
+
+.c1 {
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.c7 {
+  box-sizing: border-box;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  margin-top: 590px;
+  display: none;
+}
+
+.c2 {
+  text-align: left;
+  color: white;
+}
+
+.c5 {
+  text-align: left;
+  color: white;
+}
+
+.c4 {
+  text-align: left;
+  color: white;
+}
+
+.c3 {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.c6 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 90px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0,0,0,1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+@media (max-width:400px) {
+  .c0 {
+    min-height: calc(100vw * 1.45);
+  }
+}
+
+@media (max-width:400px) {
+  .c7 {
+    margin-top: calc(100vw * 1.45);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      <span
+        className="c3"
+      >
+        Matrix
+      </span>
+    </h1>
+    <p
+      className="c4"
+    >
+      <span
+        className="c3"
+      >
+        6.7
+        /10
+      </span>
+    </p>
+    <p
+      className="c5"
+    >
+      <span
+        className="c3"
+      >
+        lorem ipsum
+      </span>
+    </p>
+  </div>
+  <button
+    className="c6"
+    onClick={[Function]}
+  >
+    i
+  </button>
+  <div
+    className="c7"
+  >
+    <h1
+      className="c2"
+    >
+      Matrix
+    </h1>
+    <p
+      className="c4"
+    >
+      6.7
+      /10
+    </p>
+    <p
+      className="c5"
+    >
+      lorem ipsum
+    </p>
+  </div>
+</div>
+`;

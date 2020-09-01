@@ -21,7 +21,7 @@ const InfoBox = styled.div`
   position: absolute;
   bottom: 20px;
   display: ${(props) => {
-    if (!props.isVisible) {
+    if (props.isVisible) {
       return 'none'
     }
   }};
@@ -38,22 +38,22 @@ const ExpandBox = styled.div`
   }
 
   display: ${(props) => {
-    if (props.isVisible) {
+    if (!props.isVisible) {
       return 'none'
     }
   }};
 `
 const MovieTitle = styled.h1`
   text-align: left;
-  color: ${(props) => (props.expanded ? 'white' : 'black')};
+  color: ${(props) => (props.expanded ? 'black' : 'white')};
 `
 const MovieSummary = styled.p`
   text-align: left;
-  color: ${(props) => (props.expanded ? 'white' : 'black')};
+  color: ${(props) => (props.expanded ? 'black' : 'white')};
 `
 const MovieRating = styled.p`
   text-align: left;
-  color: ${(props) => (props.expanded ? 'white' : 'black')};
+  color: ${(props) => (props.expanded ? 'black' : 'white')};
 `
 const TextSpan = styled.span`
   background-color: rgba(0, 0, 0, 0.3);
@@ -94,20 +94,14 @@ interface IProps {
     imageURL: string
     title: string
     summary: string
-    rating: string
+    rating: number
   }
 }
 
-export const MovieCard = ({ item }: IProps) => {
-  const [expanded, setExpanded] = useState(true)
+const MovieCard: React.FC<IProps> = ({ item }: IProps) => {
+  const [expanded, setExpanded] = useState<boolean>(false)
 
-  const Expand = () => {
-    if (expanded) {
-      setExpanded(false)
-    } else {
-      setExpanded(true)
-    }
-  }
+  const onClickHandler = () => setExpanded(!expanded)
 
   return (
     <>
@@ -123,13 +117,7 @@ export const MovieCard = ({ item }: IProps) => {
             <TextSpan>{item.summary}</TextSpan>
           </MovieSummary>
         </InfoBox>
-        <SecondaryButton
-          onClick={() => {
-            Expand()
-          }}
-        >
-          i
-        </SecondaryButton>
+        <SecondaryButton onClick={onClickHandler}>i</SecondaryButton>
         <ExpandBox isVisible={expanded}>
           <MovieTitle expanded={expanded}>{item.title}</MovieTitle>
           <MovieRating expanded={expanded}>{item.rating}/10</MovieRating>
