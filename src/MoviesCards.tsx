@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSwipeable } from 'react-swipeable'
 import styled from 'styled-components'
 
-import MovieCard from './MovieCard'
+import MovieCard, { ItemType } from './MovieCard'
 import api from './Api'
 
 import { ReactComponent as AcceptButton } from './assets/accept.svg'
@@ -34,12 +34,12 @@ const MainButton = styled.button`
   }
 `
 interface IProps {
-  movies: Array<object>
+  movies: Array<ItemType>
 }
 
 const MoviesCards: React.FC<IProps> = ({ movies }: IProps) => {
-  const [count, setCount] = useState(0)
-  const [currentItem, setCurrentItem] = useState(null)
+  const [count, setCount] = useState<number>(0)
+  const [currentItem, setCurrentItem] = useState<null | ItemType>(null)
 
   useEffect(() => {
     setCurrentItem(movies[count])
@@ -65,7 +65,7 @@ const MoviesCards: React.FC<IProps> = ({ movies }: IProps) => {
   } else {
     return (
       <>
-        <div className="" {...onSwipeHandler}>
+        <div {...onSwipeHandler}>
           <MovieCard item={currentItem}></MovieCard>
         </div>
         <ButtonsBox>

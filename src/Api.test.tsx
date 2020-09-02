@@ -14,7 +14,7 @@ describe('fetchData', () => {
         id: 'cool99',
         imageURL: 'https://google.com/images.jpg',
         title: 'Matrix',
-        summary: 'lorem ipsum',
+        summary: 'badass movie',
         rating: 6.7
       },
       {

@@ -88,14 +88,10 @@ const SecondaryButton = styled.button`
   }
 `
 
+export type ItemType = { id: string; imageURL: string; title: string; summary: string; rating: number }
+
 interface IProps {
-  item: {
-    id: string
-    imageURL: string
-    title: string
-    summary: string
-    rating: number
-  }
+  item: ItemType
 }
 
 const MovieCard: React.FC<IProps> = ({ item }: IProps) => {

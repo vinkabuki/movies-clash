@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component basic test Render footer component 1`] = `
+<p
+  className="sc-AxjAm gvWQIK"
+>
+  Thank you for using Movies Clash
+</p>
+`;

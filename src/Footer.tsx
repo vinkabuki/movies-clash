@@ -5,7 +5,7 @@ const FooterText = styled.p`
   background-color: rgba(0, 0, 0, 0.1);
 `
 
-function Footer() {
+const Footer: React.FC = () => {
   return <FooterText>Thank you for using Movies Clash</FooterText>
 }
 

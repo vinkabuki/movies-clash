@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component basic test Render header component 1`] = `
+<div>
+  <h2>
+    Movies Clash
+    <span>
+      <img
+        className="sc-AxjAm dYgbqu"
+        src="logo.jpg"
+      />
+    </span>
+  </h2>
+</div>
+`;

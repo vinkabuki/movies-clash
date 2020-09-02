@@ -1,23 +1,24 @@
 import React from 'react'
-import logo from './assets/logo.jpg'
 import styled from 'styled-components'
 
-const Imggg = styled.img`
+import logo from './assets/logo.jpg'
+
+const LogoImg = styled.img`
   width: 30px;
   height: 30px;
 `
 
-function Logo() {
+const Header: React.FC = () => {
   return (
     <div>
       <h2>
         Movies Clash
         <span>
-          <Imggg src={logo}></Imggg>
+          <LogoImg src={logo}></LogoImg>
         </span>
       </h2>
     </div>
   )
 }
 
-export default Logo
+export default Header

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import MoviesCards from './MoviesCards'
 import { MoviesDataContext } from './data-context'
 

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component basic test Render Layout component 1`] = `
+<div
+  className="sc-fzplWN bupGwC"
+>
+  <div>
+    <h2>
+      Movies Clash
+      <span>
+        <img
+          className="sc-AxjAm dYgbqu"
+          src="logo.jpg"
+        />
+      </span>
+    </h2>
+  </div>
+  <div>
+    rendering
+  </div>
+  <p
+    className="sc-fzpans bYcObV"
+  >
+    Thank you for using Movies Clash
+  </p>
+</div>
+`;

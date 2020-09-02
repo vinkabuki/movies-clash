@@ -1,5 +1,4 @@
 import React from 'react'
+import { ItemType } from './MovieCard'
 
-const data = []
-
-export const MoviesDataContext = React.createContext<Array<object>>(data)
+export const MoviesDataContext = React.createContext<Array<ItemType>>([])
