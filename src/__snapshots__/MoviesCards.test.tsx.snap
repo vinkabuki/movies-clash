@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`MoviesCards component basic render test Render example movie item 1`] = `
-<div>
-  rendering
-</div>
-`;

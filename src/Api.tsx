@@ -1,7 +1,7 @@
 //import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const API = 'http://frozen-inlet-56856.herokuapp.com'
+const API = 'https://frozen-inlet-56856.herokuapp.com'
 
 /**
 const FetchMovies = () => {
