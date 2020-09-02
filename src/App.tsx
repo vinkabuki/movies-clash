@@ -15,7 +15,7 @@ const App: React.FC = () => {
         setMovies(response.data)
       })
       .catch(() => setIsError(true))
-  }, [movies])
+  }, [])
 
   if (movies.length === 0) {
     return <div>waiting for data</div>
