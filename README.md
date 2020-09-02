@@ -1,48 +1,100 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Movies Clash
 
-## Available Scripts
+Simple tinderalike app for matching you with movies you should see.
 
-In the project directory, you can run:
+## About this README
 
-### `yarn start`
+I've tried to make this readme as short and concise as possible, trying not to duplicate create-react-app bootstrap readme. I suggest you to check these [resources](#learn-more)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Quick start
 
-### `yarn test`
+For those who are familiar with development:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`git clone https://github.com/google/cloud9.git`  
+`cd cloud9`  
+`yarn install`  
+`yarn start`
 
-### `yarn build`
+### Prerequisities
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The only mandatory thing you must have installed on your local machine is node package manager. At this moment the two most popular are.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [Yarn](https://yarnpkg.com/) (In this readme I'll be using yarn commands, but feel free to use npm equivalents if you wish)
+- [NPM](https://www.npmjs.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Second, optional, but highly recommended thing is a git version control system
 
-### `yarn eject`
+- [Git](https://git-scm.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+First you must download this repository to your local machine, either using git (recommended)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`git clone https://github.com/vinkabuki/cloud9.git`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+or as a ZIP package.
+
+Next, make sure that you're in project directory and install dependencies by running this command
+
+`yarn install`
+
+or if you using npm
+
+`npm install`
+
+### Running
+
+The app is ready, just run this command and enjoy!
+
+`yarn start`
+
+## Testing
+
+App has only very basic tests, but was thoroughly manually tested. You can run them by running this command:
+
+`yarn test`
+
+## Built with
+
+Beside being bootstrapped with [Create React App](https://github.com/facebook/create-react-app), this app uses just two dependencies and three dev dependencies.
+
+### Dependencies
+
+- [Axios](https://github.com/axios/axios) - For HTTP requests.
+- [Styled-components](https://styled-components.com/) - For styling components.
+- []()
+
+### Dev dependencies
+
+- [React Test Renderer](https://reactjs.org/) - For testing components.
+- [Jest Styled Components](https://reactjs.org/) - Fixes issue with styled-components and testing.
+- [Eslint](https://eslint.org/) - For linting code.
+- [TypeScript] -
+
+## Future improvements
+
+- [ ] Filter Total income, Average income and Last month income by range rather than exact value.
+
+## Contributing
+
+Feel free to contribute to this project.
+
+## Versioning
+
+This app uses [git](https://git-scm.com/) versioning system
+
+## Authors
+
+- Bartosz Chyra - [Vin Kabuki](https://github.com/vinkabuki/)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-I've also implemnted a very simple NodeJS/Express server and built an primitive API which returns a list of movies, and creates list of accepted and rejected movies, it has some flaws but it was meant only to provide a basic API.
-
-Answering this question I've created a context provider in my app, it may feel unnecessary baceause the app is relatively small, in bigger app it would make app clearer, and easier to maintain, not only because separation of concerns, but also it would be possible to avoid endless messy passing of props.
+- You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Here you will find the original readme file [Create React App Readme](https://github.com/facebook/create-react-app/blob/master/README.md).
+- To learn React, check out the [React documentation](https://reactjs.org/).

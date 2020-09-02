@@ -55,9 +55,6 @@ const MoviesCards: React.FC<IProps> = ({ movies }: IProps) => {
   }
   const onSwipeHandler = useSwipeable({
     onSwipedLeft: () => {
-      onAcceptHandler(currentItem.id)
-    },
-    onSwipedRight: () => {
       onRejectHandler(currentItem.id)
     }
   })

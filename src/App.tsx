@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { MoviesDataContext } from './data-context'
 import api from './Api'
 import Layout from './Layout'
 
 function App() {
-  const movies: Array<object> = api.fetchMovies()
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    api.fetchMovies().then((response) => {
+      setMovies(response.data)
+    })
+  }, [movies])
 
   if (movies.length === 0) {
     return <div>waiting for data</div>

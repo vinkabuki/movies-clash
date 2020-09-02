@@ -62,8 +62,8 @@ const SecondaryButton = styled.button`
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 10px;
+  bottom: 10px;
   border-radius: 90px;
   cursor: pointer;
   border: none;

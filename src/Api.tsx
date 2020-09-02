@@ -1,30 +1,40 @@
-import { useState, useEffect } from 'react'
+//import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const API = 'http://frozen-inlet-56856.herokuapp.com'
+
+/**
 const FetchMovies = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
     axios
-      .get(`https://frozen-inlet-56856.herokuapp.com/recommendations`)
+      .get(`{${API}/recommendations`)
       .then((response) => {
         setMovies(response.data)
-        return response.data
       })
       .catch((err) => console.log(err))
   }, [])
   return movies
 }
+*/
+
+export const fetchMovies = async () => {
+  const url = `${API}/recommendations/`
+
+  return await axios.get(url)
+}
 
 const acceptMovie = (id: string) => {
-  axios.put(`https://frozen-inlet-56856.herokuapp.com/recommendations/${id}/accept/`).catch((err) => console.log(err))
+  axios.put(`${API}/recommendations/${id}/accept/`).catch((err) => console.log(err))
 }
 const rejectMovie = (id: string) => {
-  axios.put(`https://frozen-inlet-56856.herokuapp.com/recommendations/${id}/reject/`).catch((err) => console.log(err))
+  axios.put(`${API}/recommendations/${id}/reject/`).catch((err) => console.log(err))
 }
 
 export default {
-  fetchMovies: FetchMovies,
+  fetchMovies: fetchMovies,
   acceptMovie,
-  rejectMovie
+  rejectMovie,
+  API
 }
