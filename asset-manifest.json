@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/movies-clash/static/css/main.2d9f764c.chunk.css",
-    "main.js": "/movies-clash/static/js/main.86372c7e.chunk.js",
-    "main.js.map": "/movies-clash/static/js/main.86372c7e.chunk.js.map",
+    "main.js": "/movies-clash/static/js/main.d3476bc8.chunk.js",
+    "main.js.map": "/movies-clash/static/js/main.d3476bc8.chunk.js.map",
     "runtime-main.js": "/movies-clash/static/js/runtime-main.f6f17140.js",
     "runtime-main.js.map": "/movies-clash/static/js/runtime-main.f6f17140.js.map",
     "static/js/2.d453445f.chunk.js": "/movies-clash/static/js/2.d453445f.chunk.js",
     "static/js/2.d453445f.chunk.js.map": "/movies-clash/static/js/2.d453445f.chunk.js.map",
     "index.html": "/movies-clash/index.html",
-    "precache-manifest.62916245fcf36bc3aca384cf1381a95a.js": "/movies-clash/precache-manifest.62916245fcf36bc3aca384cf1381a95a.js",
+    "precache-manifest.0848afb72adac271c61cce585866c669.js": "/movies-clash/precache-manifest.0848afb72adac271c61cce585866c669.js",
     "service-worker.js": "/movies-clash/service-worker.js",
     "static/css/main.2d9f764c.chunk.css.map": "/movies-clash/static/css/main.2d9f764c.chunk.css.map",
     "static/js/2.d453445f.chunk.js.LICENSE.txt": "/movies-clash/static/js/2.d453445f.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.f6f17140.js",
     "static/js/2.d453445f.chunk.js",
     "static/css/main.2d9f764c.chunk.css",
-    "static/js/main.86372c7e.chunk.js"
+    "static/js/main.d3476bc8.chunk.js"
   ]
 }

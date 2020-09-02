@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b04151c767d40fde8ef5706d50b12f8",
+    "revision": "a8fc934c1bc5fa7a121ee9cbb700672e",
     "url": "/movies-clash/index.html"
   },
   {
-    "revision": "dbd38e595e9bc30ad5e2",
+    "revision": "de350e04c4df4bded274",
     "url": "/movies-clash/static/css/main.2d9f764c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/movies-clash/static/js/2.d453445f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dbd38e595e9bc30ad5e2",
-    "url": "/movies-clash/static/js/main.86372c7e.chunk.js"
+    "revision": "de350e04c4df4bded274",
+    "url": "/movies-clash/static/js/main.d3476bc8.chunk.js"
   },
   {
     "revision": "7a8897dd8189abf2a11a",
