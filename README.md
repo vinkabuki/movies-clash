@@ -14,7 +14,7 @@ I've tried to make this readme as short and concise as possible, trying not to d
 
 For those who are familiar with development:
 
-`git clone https://github.com/google/movies-clash.git`  
+`git clone https://github.com/vinkabuki/movies-clash.git`  
 `cd movies-clash`  
 `yarn install`  
 `yarn start`
@@ -51,6 +51,12 @@ or if you using npm
 The app is ready, just run this command and enjoy!
 
 `yarn start`
+
+#### Running app in Docker
+
+You can also run the app in docker by using this command (you must have docker and docker-compose installed on your machine)
+
+`docker-compose up`
 
 ## Testing
 
