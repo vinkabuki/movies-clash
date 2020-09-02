@@ -5,8 +5,6 @@ import api from './Api'
 
 jest.mock('axios')
 
-console.log(api.fetchMovies)
-
 describe('fetchData', () => {
   it('fetches successfully data from an API', async () => {
     const data = [
