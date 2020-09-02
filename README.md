@@ -14,8 +14,8 @@ I've tried to make this readme as short and concise as possible, trying not to d
 
 For those who are familiar with development:
 
-`git clone https://github.com/google/cloud9.git`  
-`cd cloud9`  
+`git clone https://github.com/google/movies-clash.git`  
+`cd movies-clash`  
 `yarn install`  
 `yarn start`
 
@@ -66,14 +66,16 @@ Beside being bootstrapped with [Create React App](https://github.com/facebook/cr
 
 - [Axios](https://github.com/axios/axios) - For HTTP requests.
 - [Styled-components](https://styled-components.com/) - For styling components.
-- []()
+- [Typescript](https://www.typescriptlang.org/) - For extending js by adding types
+- [React-swipeable](https://github.com/FormidableLabs/react-swipeable) - For adding swipe functionalit
 
 ### Dev dependencies
 
-- [React Test Renderer](https://reactjs.org/) - For testing components.
+- [Jest](https://jestjs.io/) - For testing
 - [Jest Styled Components](https://reactjs.org/) - Fixes issue with styled-components and testing.
 - [Eslint](https://eslint.org/) - For linting code.
-- [TypeScript] -
+- [Prettier](https://prettier.io/) - For formating code
+- [Gh-pages](https://github.com/tschaub/gh-pages) - For deploying repository to github pages
 
 ## Future improvements
 
@@ -93,7 +95,7 @@ This app uses [git](https://git-scm.com/) versioning system
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License.
 
 ## Learn More
 
