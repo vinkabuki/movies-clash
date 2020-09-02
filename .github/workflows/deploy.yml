@@ -15,9 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install modules
         run: npm install
-          npm build
-      - name: CHeck repositry
-        run: ls
       - name: Build
         run: ./node_modules/.bin/react-scripts build
       - name: Deploy

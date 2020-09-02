@@ -5,9 +5,3 @@ exports[`App component basic shallow test Render main component 1`] = `
   waiting for data
 </div>
 `;
-
-exports[`App component basic test Render main component 1`] = `
-<div>
-  waiting for data
-</div>
-`;
