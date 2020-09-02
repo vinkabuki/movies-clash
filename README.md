@@ -34,7 +34,7 @@ Second, optional, but highly recommended thing is a git version control system
 
 First you must download this repository to your local machine, either using git (recommended)
 
-`git clone https://github.com/vinkabuki/cloud9.git`
+`git clone https://github.com/vinkabuki/movies-clash.git`
 
 or as a ZIP package.
 
