@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesCards component basic shallow render test Render MoviesCards component 1`] = `
+<div>
+  rendering
+</div>
+`;

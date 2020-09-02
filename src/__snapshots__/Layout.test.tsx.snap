@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component basic shallow test Render Layout component 1`] = `
+<ForwardRef(styled.div)>
+  <Header />
+  <Body />
+  <Footer />
+</ForwardRef(styled.div)>
+`;
