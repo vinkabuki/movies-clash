@@ -1,11 +1,12 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import ShallowRenderer from 'react-test-renderer/shallow'
 import Layout from './Layout'
 
-describe('Layout component basic test', () => {
+describe('Layout component basic shallow test', () => {
   test('Render Layout component', () => {
-    const component = renderer.create(<Layout />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    const renderer = new ShallowRenderer()
+    renderer.render(<Layout />)
+    const component = renderer.getRenderOutput()
+    expect(component).toMatchSnapshot()
   })
 })

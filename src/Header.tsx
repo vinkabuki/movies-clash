@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       <h2>
         Movies Clash
         <span>
-          <LogoImg src={logo}></LogoImg>
+          <LogoImg src={logo} alt="Our logo" />
         </span>
       </h2>
     </div>

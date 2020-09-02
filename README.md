@@ -1,6 +1,8 @@
 # Movies Clash
 
-Simple tinderalike app for matching you with movies you should see.
+LIVE: https://vinkabuki.github.io/movies-clash/
+
+Simple tinderalike app for matching you with movies you would love.
 
 ## About this README
 
@@ -58,7 +60,7 @@ App has only very basic tests, but was thoroughly manually tested. You can run t
 
 ## Built with
 
-Beside being bootstrapped with [Create React App](https://github.com/facebook/create-react-app), this app uses just two dependencies and three dev dependencies.
+Beside being bootstrapped with [Create React App](https://github.com/facebook/create-react-app), this app uses following dependencies:
 
 ### Dependencies
 

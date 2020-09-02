@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Body component basic test Render body component 1`] = `
-<div>
-  rendering
-</div>
-`;

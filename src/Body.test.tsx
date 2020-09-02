@@ -1,11 +1,12 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import ShallowRenderer from 'react-test-renderer/shallow'
 import Body from './Body'
 
-describe('Body component basic test', () => {
-  test('Render body component', () => {
-    const component = renderer.create(<Body />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+describe('Body component basic shallow test', () => {
+  test('Render Body component', () => {
+    const renderer = new ShallowRenderer()
+    renderer.render(<Body />)
+    const component = renderer.getRenderOutput()
+    expect(component).toMatchSnapshot()
   })
 })

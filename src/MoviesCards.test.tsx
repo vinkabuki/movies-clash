@@ -1,15 +1,15 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import ShallowRenderer from 'react-test-renderer/shallow'
 import 'jest-styled-components'
 import MoviesCards from './MoviesCards'
 
-describe('MoviesCards component basic render test', () => {
+describe('MoviesCards component basic shallow render test', () => {
   const movies = [
     {
       id: 'cool99',
       imageURL: 'https://google.com/images.jpg',
       title: 'Matrix',
-      summary: 'lorem ipsum',
+      summary: 'badass movie',
       rating: 6.7
     },
     {
@@ -20,9 +20,10 @@ describe('MoviesCards component basic render test', () => {
       rating: 9.9
     }
   ]
-  test('Render example movie item', () => {
-    const component = renderer.create(<MoviesCards movies={movies} />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('Render MoviesCards component', () => {
+    const renderer = new ShallowRenderer()
+    renderer.render(<MoviesCards movies={movies} />)
+    const component = renderer.getRenderOutput()
+    expect(component).toMatchSnapshot()
   })
 })
