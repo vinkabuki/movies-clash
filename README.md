@@ -83,10 +83,6 @@ Beside being bootstrapped with [Create React App](https://github.com/facebook/cr
 - [Prettier](https://prettier.io/) - For formating code
 - [Gh-pages](https://github.com/tschaub/gh-pages) - For deploying repository to github pages
 
-## Future improvements
-
-- [ ] Filter Total income, Average income and Last month income by range rather than exact value.
-
 ## Contributing
 
 Feel free to contribute to this project.
