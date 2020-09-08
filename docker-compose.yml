@@ -4,7 +4,7 @@ services:
   app:
     stdin_open: true
     ports:
-      - 3000:3000
+      - 4000:3000
     build:
       context: .
       dockerfile: Dockerfile
